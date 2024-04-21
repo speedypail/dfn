@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #registerForm {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: slide-up 0.5s ease;
+        }
+        label{
+            width: 150px;
+            display: inline-block;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        @keyframes slide-up {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Organization Registration</h2>
+        <form id="registerForm">
+            <div>
+                <label for="orgName">Organization Name:</label>
+                <input type="text" id="orgName" name="orgName" required >
+            </div>
+            <br>
+            <div>
+                <label for="contactName">Contact Person Name:</label>
+                <input type="text" id="contactName" name="contactName" required>
+            </div>
+            <br>
+            <div>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <br>
+            <div>
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" name="contactNumber" required>
+            </div>
+            <br>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <br>
+            <div>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <br>
+            <div>
+                <label for="orgType">Type of Organization:</label>
+                <select id="orgType" name="orgType" required>
+                    <option value="">Select Organization Type</option>
+                    <option value="foodBank">Food Bank</option>
+                    <option value="shelter">Shelter</option>
+                    <option value="communityKitchen">Community Kitchen</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="dietaryPreferences">Dietary Preferences:</label>
+                <input type="radio" id="veg" name="dietaryPreferences" value="vegetarian">
+                <label for="veg">Vegetarian</label>
+                <input type="radio" id="nonVeg" name="dietaryPreferences" value="non-vegetarian">
+                <label for="nonVeg">Non-Vegetarian</label>
+            </div>
+            <br>
+            <div>
+                <label for="quantityNeeded">Quantity Needed:</label>
+                <input type="text" id="quantityNeeded" name="quantityNeeded">
+            </div>
+            <br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
